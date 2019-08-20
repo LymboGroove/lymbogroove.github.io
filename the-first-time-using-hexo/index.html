@@ -64,15 +64,10 @@
 <meta property="og:site_name" content="Abgrund">
 <meta property="og:description" content="前言忙了两天总算把Hexo“算是”搭好了……参考了几个大佬的文章，也算是把这个Blog做得好看了一点……（大概）也遇到了很多之前用Wordpress这种动态网站不会遇到的情况……作为一个没学过C/JavaScript/Python/HTML&amp;amp;CSS……的小白来讲算是有点挑战。这篇文章就扯扯如何安装Hexo，以及安装过程中我遇到了什么情况吧。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2019/08/18/xK6afjXbQrILJ8h.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/19/FBPHe47zAvcR9K3.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/19/X23owJUpKEqhImG.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/gdutxiaoxu/blog_pic/master/19_06/9fe4afa0gw1falkk5mnsvj211y0lcten.jpg">
 <meta property="og:updated_time" content="2019-08-20T03:02:48.854Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初见Hexo">
 <meta name="twitter:description" content="前言忙了两天总算把Hexo“算是”搭好了……参考了几个大佬的文章，也算是把这个Blog做得好看了一点……（大概）也遇到了很多之前用Wordpress这种动态网站不会遇到的情况……作为一个没学过C/JavaScript/Python/HTML&amp;amp;CSS……的小白来讲算是有点挑战。这篇文章就扯扯如何安装Hexo，以及安装过程中我遇到了什么情况吧。">
-<meta name="twitter:image" content="https://i.loli.net/2019/08/18/xK6afjXbQrILJ8h.png">
   <link rel="alternate" href="/atom.xml" title="Abgrund" type="application/atom+xml">
   <link rel="canonical" href="https://lymboo.xyz/the-first-time-using-hexo/">
 
@@ -363,17 +358,17 @@
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>忙了两天总算把Hexo“算是”搭好了……参考了几个大佬的文章，也算是把这个Blog做得好看了一点……（大概）<br>也遇到了很多之前用Wordpress这种动态网站不会遇到的情况……作为一个没学过C/JavaScript/Python/HTML&amp;CSS……的小白来讲算是有点挑战。<br>这篇文章就扯扯如何安装Hexo，以及安装过程中我遇到了什么情况吧。</p>
 <a id="more"></a>
 <h1 id="安装Hexo之前"><a href="#安装Hexo之前" class="headerlink" title="安装Hexo之前"></a>安装Hexo之前</h1><p>在安装Hexo之前必须的操作就是安装环境(Environment)——Node.js和Git。简而言之，环境是运行Hexo软件以及其它软件的一系列必需底层软件。</p>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>Node.js是一个运行Javascript的跨平台运行环境。你可以在<a href="https://nodejs.org/en/" target="_blank" rel="noopener">这里</a>下载到适合自己系统版本的Node.js并一路Next到底（注意在有Add to Path选项出现的时候确认Install到系统里）。<br>安装好后检查一下是否安装成功：Win徽标键+R打开运行窗口，输入cmd并回车打开命令行界面，在命令行界面中输入<code>node -v</code>和<code>npm -v</code>并检查输出是否为两组数字，如：</p>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>Node.js是一个运行Javascript的跨平台运行环境。你可以在<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2VuLw==" title="https://nodejs.org/en/">这里<i class="fa fa-external-link"></i></span>下载到适合自己系统版本的Node.js并一路Next到底（注意在有Add to Path选项出现的时候确认Install到系统里）。<br>安装好后检查一下是否安装成功：Win徽标键+R打开运行窗口，输入cmd并回车打开命令行界面，在命令行界面中输入<code>node -v</code>和<code>npm -v</code>并检查输出是否为两组数字，如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">C:\windows\system32&gt;node -v</span><br><span class="line">v 12.8.1</span><br><span class="line"></span><br><span class="line">C:\windows\system32&gt;npm -v</span><br><span class="line">6.10.2</span><br></pre></td></tr></table></figure>
 
 <p>如果与之类似，则可以继续往下；如果出现错误就需要回头再看看有没有哪里出错。</p>
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>Git是一个分布式版本控制系统，简单理解就有点像比特币所涉及的区块链那样，但每个节点都有所有网络以及自己本身的数据，稍微有点复杂。你可以在<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">这里</a>下载到适合自己系统版本的Git。在一路Next的时候，你可以选择<strong>手动添加Git到系统Path中</strong>：当出现“Adjusting your PATH environment”的时候选择第二个选项（即选择Use Git from the Windows Command Prompt）即可。<br>这一步不是必需操作，可以忽略。<br>安装好后，你可以打开Git Bash或CMD检查是否安装正确（方法同上），输入<code>git --version</code>并检查输出是否与下列代码类似：</p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>Git是一个分布式版本控制系统，简单理解就有点像比特币所涉及的区块链那样，但每个节点都有所有网络以及自己本身的数据，稍微有点复杂。你可以在<span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZHM=" title="https://git-scm.com/downloads">这里<i class="fa fa-external-link"></i></span>下载到适合自己系统版本的Git。在一路Next的时候，你可以选择<strong>手动添加Git到系统Path中</strong>：当出现“Adjusting your PATH environment”的时候选择第二个选项（即选择Use Git from the Windows Command Prompt）即可。<br>这一步不是必需操作，可以忽略。<br>安装好后，你可以打开Git Bash或CMD检查是否安装正确（方法同上），输入<code>git --version</code>并检查输出是否与下列代码类似：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\windows\system32&gt;git --version</span><br><span class="line">git version 2.22.0.windows.1</span><br></pre></td></tr></table></figure>
 
-<p>在确认安装好后，你还需要注册一个Github账号（毕竟这样才可以开心的建(bai)站(piao)）。点击<a href="https://github.com" target="_blank" rel="noopener">这里</a>选择Sign-up，并填入自己的昵称、邮箱、密码并通过验证确认注册。成功注册并登录后，就可以开始添加自己的Repo，准备建站了。<br>在登录之后，点击头像旁的”+”后选择New repository从而新建一个代码库<img src="https://i.loli.net/2019/08/18/xK6afjXbQrILJ8h.png" alt="image.png"><br>然后在Repository Name填入yourname.github.io（yourname指的是你的Github名称，如Lymbo.github.io）。<br>随后在自己的电脑上<strong>新建一个用于放置网站内容的文件夹</strong>（如D:\blog），双击打开后右键选择Git Bash here<img src="https://i.loli.net/2019/08/19/FBPHe47zAvcR9K3.png" alt="image.png"><br>并设置user.name和user.email配置信息，生成ssh密钥：<strong>（以下代码框中，尖括号(含尖括号本身)中的内容需替换成对应信息）</strong></p>
+<p>在确认安装好后，你还需要注册一个Github账号（毕竟这样才可以开心的建(bai)站(piao)）。点击<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29t" title="https://github.com">这里<i class="fa fa-external-link"></i></span>选择Sign-up，并填入自己的昵称、邮箱、密码并通过验证确认注册。成功注册并登录后，就可以开始添加自己的Repo，准备建站了。<br>在登录之后，点击头像旁的”+”后选择New repository从而新建一个代码库<img alt="image.png" data-src="https://i.loli.net/2019/08/18/xK6afjXbQrILJ8h.png"><br>然后在Repository Name填入yourname.github.io（yourname指的是你的Github名称，如Lymbo.github.io）。<br>随后在自己的电脑上<strong>新建一个用于放置网站内容的文件夹</strong>（如D:\blog），双击打开后右键选择Git Bash here<img alt="image.png" data-src="https://i.loli.net/2019/08/19/FBPHe47zAvcR9K3.png"><br>并设置user.name和user.email配置信息，生成ssh密钥：<strong>（以下代码框中，尖括号(含尖括号本身)中的内容需替换成对应信息）</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &lt;github用户名&gt;</span><br><span class="line">$ git config --global user.email &lt;github注册邮箱&gt;</span><br><span class="line">$ ssh-keygen -t rsa -C  &lt;github注册邮箱&gt;</span><br></pre></td></tr></table></figure>
 
-<p>直接三个回车就行，不用设置ssh文件的密码；如果不放心这一步也可以三个回车之后截图以防万一（我就这么做了，虽然后面也没什么用）。然后转到<code>C:/user(或你的用户名称，如lymbo)/admin/.ssh</code>并使用记事本/notepad++打开id_rsa.pub文件，将其中内容全部复制。在<a href="https://github.com/settings/ssh/new" target="_blank" rel="noopener">这个网站</a>把复制的内容粘贴到key中并起一个title（title可以随意xd），检查无误后选择add key就可以了。<br>如果不放心，你可以在git bash中用<code>ssh git@github.com</code>检查一下github公钥是否设置成功。</p>
+<p>直接三个回车就行，不用设置ssh文件的密码；如果不放心这一步也可以三个回车之后截图以防万一（我就这么做了，虽然后面也没什么用）。然后转到<code>C:/user(或你的用户名称，如lymbo)/admin/.ssh</code>并使用记事本/notepad++打开id_rsa.pub文件，将其中内容全部复制。在<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NldHRpbmdzL3NzaC9uZXc=" title="https://github.com/settings/ssh/new">这个网站<i class="fa fa-external-link"></i></span>把复制的内容粘贴到key中并起一个title（title可以随意xd），检查无误后选择add key就可以了。<br>如果不放心，你可以在git bash中用<code>ssh git@github.com</code>检查一下github公钥是否设置成功。</p>
 <h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><p>安装Hexo相对来讲比较简单，只需要在你刚刚建立的文件夹中右键Git Bash Here并使用npm安装Hexo：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm install hexo --save</span><br></pre></td></tr></table></figure>
 
@@ -386,11 +381,11 @@
 <p>初始化之后，可以输入以下命令检查网站运行状态：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 
-<p>运行完以上程序后，打开浏览器，在地址栏输入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br>此时你应该会看到一个崭新的Hexo网站，以及一篇Hello World日志，如图：<img src="https://i.loli.net/2019/08/19/X23owJUpKEqhImG.png" alt="image.png"><br>当然，一开始的会更像一个“经典”的Blog，比如</p>
-<blockquote><p><img src="https://raw.githubusercontent.com/gdutxiaoxu/blog_pic/master/19_06/9fe4afa0gw1falkk5mnsvj211y0lcten.jpg" alt="image.png"></p>
-<footer><strong>Xuanwo's Blog</strong><cite><a href="https://xuanwo.io/2015/03/26/hexo-intor/" target="_blank" rel="noopener">史上最详细的Hexo博客搭建图文教程</a></cite></footer></blockquote>
+<p>运行完以上程序后，打开浏览器，在地址栏输入<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo0MDAw" title="http://localhost:4000">http://localhost:4000<i class="fa fa-external-link"></i></span><br>此时你应该会看到一个崭新的Hexo网站，以及一篇Hello World日志，如图：<img alt="image.png" data-src="https://i.loli.net/2019/08/19/X23owJUpKEqhImG.png"><br>当然，一开始的会更像一个“经典”的Blog，比如</p>
+<blockquote><p><img alt="image.png" data-src="https://raw.githubusercontent.com/gdutxiaoxu/blog_pic/master/19_06/9fe4afa0gw1falkk5mnsvj211y0lcten.jpg"></p>
+<footer><strong>Xuanwo's Blog</strong><cite><span class="exturl" data-url="aHR0cHM6Ly94dWFud28uaW8vMjAxNS8wMy8yNi9oZXhvLWludG9yLw==" title="https://xuanwo.io/2015/03/26/hexo-intor/">史上最详细的Hexo博客搭建图文教程<i class="fa fa-external-link"></i></span></cite></footer></blockquote>
 
-<p><a href="https://xuanwo.io/2015/03/26/hexo-intor/" target="_blank" rel="noopener">这篇教程</a>中展示的那样。<br>下一步，你就需要把Github和Hexo关联起来。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly94dWFud28uaW8vMjAxNS8wMy8yNi9oZXhvLWludG9yLw==" title="https://xuanwo.io/2015/03/26/hexo-intor/">这篇教程<i class="fa fa-external-link"></i></span>中展示的那样。<br>下一步，你就需要把Github和Hexo关联起来。</p>
 <h2 id="关联Github和Hexo"><a href="#关联Github和Hexo" class="headerlink" title="*关联Github和Hexo"></a>*关联Github和Hexo</h2><p>在此之前，先要明白：Hexo网站根目录（就是你安装Hexo的文件夹）下的<strong>站点配置文件</strong>——<code>_config.yml</code>，以及Hexo根目录\Theme下的<strong>主题配置文件</strong>——<code>_config.yml</code>两者虽然名字一样，但是作用却大不相同：前者主要用于配置整个Hexo站点；后者主要是对站点的主题进行美化或者功能修饰。在这一步当中，我们需要处理的是前者，即<strong>站点配置文件</strong>。此外，在Hexo中的.yml文件，<strong>冒号后都需要有空格</strong>，否则会报错。<br>在Notepad++/记事本/VSCode/Atom等编辑器中打开<code>_config.yml</code>，搜索deploy并找到</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
 
@@ -398,22 +393,22 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure>
 
 <p>你就可以在你的Github上看到自己的网站了。</p>
-<h1 id="Hexo的美化"><a href="#Hexo的美化" class="headerlink" title="Hexo的美化"></a>Hexo的美化</h1><p>关于美化，第一步一般都是选定主题，比如NexT（就是我现在所使用的主题）等。你可以通过<a href="http://hexo.io/themes/" target="_blank" rel="noopener">这里</a>查看你喜欢的主题并下载到你的Hexo Theme文件夹里（或者按照主题作者Github Repo中的提示进行相应操作）。随后再次运行<code>hexo clean</code> <code>hexo d -g</code>就可以看到新的主题了。</p>
+<h1 id="Hexo的美化"><a href="#Hexo的美化" class="headerlink" title="Hexo的美化"></a>Hexo的美化</h1><p>关于美化，第一步一般都是选定主题，比如NexT（就是我现在所使用的主题）等。你可以通过<span class="exturl" data-url="aHR0cDovL2hleG8uaW8vdGhlbWVzLw==" title="http://hexo.io/themes/">这里<i class="fa fa-external-link"></i></span>查看你喜欢的主题并下载到你的Hexo Theme文件夹里（或者按照主题作者Github Repo中的提示进行相应操作）。随后再次运行<code>hexo clean</code> <code>hexo d -g</code>就可以看到新的主题了。</p>
 <h2 id="举个栗子：安装NexT主题。"><a href="#举个栗子：安装NexT主题。" class="headerlink" title="举个栗子：安装NexT主题。"></a>举个栗子：安装NexT主题。</h2><p>你可以直接进入你的Hexo站点根目录，然后执行<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code>。随后打开<strong>站点配置文件</strong>并修改主题为<code>theme: next</code>。随后清理Hexo的缓存<code>hexo clean</code>并使用<code>hexo s</code>查看你的主题是否更换成了NexT。你还可以在NexT的<strong>主题配置文件</strong>中修改scheme选择你喜欢的主题样式，如<code>scheme: Pisces</code>；修改language语言以符合你的本地化需求，如<code>language: zh-Hans</code>；设置菜单栏显示的内容，如：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">    home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">    archives:</span> <span class="string">/archives</span></span><br><span class="line">    <span class="comment">#about: /about</span></span><br><span class="line">    <span class="comment">#categories: /categories</span></span><br><span class="line"><span class="attr">    tags:</span> <span class="string">/tags</span></span><br><span class="line">    <span class="comment">#commonweal: /404.html</span></span><br></pre></td></tr></table></figure>
 
-<p>等等一系列操作，你可以查看<a href="https://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">这里</a>以获取更多“调教”NexT的方法（不）。</p>
-<p>一些进阶的美化操作，你可以查看<a href="https://io-oi.me/tech/hexo-next-optimization.html" target="_blank" rel="noopener">这位大佬的Hexo进阶教程</a>，或者善用Google/Baidu进行关键词搜索。</p>
+<p>等等一系列操作，你可以查看<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lmlpc3NuYW4uY29tL2dldHRpbmctc3RhcnRlZC5odG1s" title="https://theme-next.iissnan.com/getting-started.html">这里<i class="fa fa-external-link"></i></span>以获取更多“调教”NexT的方法（不）。</p>
+<p>一些进阶的美化操作，你可以查看<span class="exturl" data-url="aHR0cHM6Ly9pby1vaS5tZS90ZWNoL2hleG8tbmV4dC1vcHRpbWl6YXRpb24uaHRtbA==" title="https://io-oi.me/tech/hexo-next-optimization.html">这位大佬的Hexo进阶教程<i class="fa fa-external-link"></i></span>，或者善用Google/Baidu进行关键词搜索。</p>
 <h1 id="一些我所遇到的意外状况"><a href="#一些我所遇到的意外状况" class="headerlink" title="一些我所遇到的意外状况"></a>一些我所遇到的意外状况</h1><ol>
 <li>在<code>hexo deploy</code>的时候，出现部署错误信息<code>xxx does not appear to be a git repository</code>。重新检查站点配置文件_config.yml中deploy设置，确认无误后再打开文件夹……发现删除<code>.deploy_git</code>文件夹后重新执行<code>hexo c</code> <code>hexo d</code>就可以解决问题。</li>
 <li>在部署到Github的时候绑定的自有域名总是消失，导致无法使用自有域名访问网站，显示Github 404。在DNS供应商添加了404页面下帮助文件中的ip地址，确认根目录下有CNAME文件且文件中有自有域名，随后<code>hexo clean</code> <code>hexo d -g</code>就解决了。（这件小事情我居然面对电脑纠结了半天……）</li>
 </ol>
 <p>这篇文章也仅仅只是涵盖了我所遇到的一小部分问题和想法，并不代表所有将来会遇到的情况。但总体来说，安装Hexo并且做一些基础的美化还是比较简单的。<br>总之，学会善用搜索引擎查找资料，多阅读官方文档或者Github项目下的issues，会对建设博客带来很大的帮助。</p>
 <h1 id="引用与参考"><a href="#引用与参考" class="headerlink" title="引用与参考"></a>引用与参考</h1><ol>
-<li><a href="https://hexo.io/docs/index.html" target="_blank" rel="noopener">https://hexo.io/docs/index.html</a></li>
-<li><a href="https://xuanwo.io/2015/03/26/hexo-intor/" target="_blank" rel="noopener">https://xuanwo.io/2015/03/26/hexo-intor/</a></li>
-<li><a href="https://io-oi.me/tech/hexo-next-optimization.html" target="_blank" rel="noopener">https://io-oi.me/tech/hexo-next-optimization.html</a></li>
-<li><a href="http://www.mway.top/2016/10/17/hexo-NEXT%E4%B8%BB%E9%A2%98%E4%B9%8B%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/" target="_blank" rel="noopener">http://www.mway.top/2016/10/17/hexo-NEXT%E4%B8%BB%E9%A2%98%E4%B9%8B%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvaW5kZXguaHRtbA==" title="https://hexo.io/docs/index.html">https://hexo.io/docs/index.html<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly94dWFud28uaW8vMjAxNS8wMy8yNi9oZXhvLWludG9yLw==" title="https://xuanwo.io/2015/03/26/hexo-intor/">https://xuanwo.io/2015/03/26/hexo-intor/<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9pby1vaS5tZS90ZWNoL2hleG8tbmV4dC1vcHRpbWl6YXRpb24uaHRtbA==" title="https://io-oi.me/tech/hexo-next-optimization.html">https://io-oi.me/tech/hexo-next-optimization.html<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL3d3dy5td2F5LnRvcC8yMDE2LzEwLzE3L2hleG8tTkVYVCVFNCVCOCVCQiVFOSVBMiU5OCVFNCVCOSU4QiVFNSU4RCU5QSVFNSVBRSVBMiVFNCVCQyU5OCVFNSU4QyU5Ni8=" title="http://www.mway.top/2016/10/17/hexo-NEXT%E4%B8%BB%E9%A2%98%E4%B9%8B%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/">http://www.mway.top/2016/10/17/hexo-NEXT%E4%B8%BB%E9%A2%98%E4%B9%8B%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/<i class="fa fa-external-link"></i></span></li>
 </ol>
 
     </div>
